@@ -20,7 +20,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
     // Return a 404 if the template doesn't exist
 
     if filepath.Clean(r.URL.Path) == "/" {
-        fp = filepath.Join("static", "index.html")
+        fp = filepath.Join("static", "templates", "index.html")
         tmpl, err := template.ParseFiles(lp, fp)
         if err != nil {
             log.Print(err.Error())
@@ -30,7 +30,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
         data := TemplateData {
             Active: "index.html",
         }
-        log.Print(data)
+        //log.Print(data)
         err = tmpl.ExecuteTemplate(w, "layout", data)
         return
     }

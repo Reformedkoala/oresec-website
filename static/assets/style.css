@@ -78,3 +78,15 @@ img{
     border-radius: .5em;
     font-size: 50px;
 }
+
+.centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-grad {
+    background: linear-gradient(rgb(9, 57, 108), rgb(255, 255, 255));
+
+}
