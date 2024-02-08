@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+    //"fmt"
     "path/filepath"
     "strings"
 )
@@ -17,6 +18,24 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
     lp := filepath.Join("static", "templates", "layout.html")
 	fp := filepath.Join("static", "templates", filepath.Clean(r.URL.Path))
     // Return a 404 if the template doesn't exist
+
+    if filepath.Clean(r.URL.Path) == "/" {
+        fp = filepath.Join("static", "index.html")
+        tmpl, err := template.ParseFiles(lp, fp)
+        if err != nil {
+            log.Print(err.Error())
+            http.Error(w, http.StatusText(500), 500)
+            return
+        }
+        data := TemplateData {
+            Active: "index.html",
+        }
+        log.Print(data)
+        err = tmpl.ExecuteTemplate(w, "layout", data)
+        return
+    }
+
+
 	info, err := os.Stat(fp)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -31,7 +50,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl, err := template.ParseFiles(lp, fp)
+    tmpl, err := template.ParseFiles(lp, fp)
 	if err != nil {
 		// Log the detailed error
 		log.Print(err.Error())
@@ -43,6 +62,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
     data := TemplateData {
         Active: strings.TrimPrefix(filepath.Clean(r.URL.Path),"/"),
     }
+
 	err = tmpl.ExecuteTemplate(w, "layout", data)
 	if err != nil {
 		log.Print(err.Error())
