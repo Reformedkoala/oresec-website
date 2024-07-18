@@ -1,10 +1,12 @@
 package main
 
+//go:generate npm run build
+
 import (
     "html/template"
-	"log"
-	"net/http"
-	"os"
+    "log"
+    "net/http"
+    "os"
     //"fmt"
     "path/filepath"
     "strings"
