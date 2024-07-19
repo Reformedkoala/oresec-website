@@ -25,14 +25,14 @@ img{
 
 }
 
-.footer {
+.footer{
     position: relative;
     top: 5px;
     width: 100%;
     padding-top: 10px;
     border-top: 1px solid gray;
     opacity: 50%;
-    color: gray;
+    color: white;
     text-align: center;
 }
 
@@ -42,7 +42,6 @@ img{
 }
 
 .nav-link {
-    color: black !Important;
     text-align: center;
     display: inline-block;
 }
@@ -67,12 +66,6 @@ img{
     margin-left: 2em;
 }
 
-.btn-lg{
-    margin-top: 2rem;
-    border-radius: .5em;
-    font-size: 50px;
-}
-
 .centered {
     position: absolute;
     top: 45%;
@@ -81,7 +74,7 @@ img{
 }
 
 .back-grad {
-    background: linear-gradient(rgb(9, 57, 108), rgb(255, 255, 255));
+    background: linear-gradient(rgb(9, 57, 108), rgba(17,24,39));
 
 }
 
@@ -93,4 +86,12 @@ img{
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap
+}
+
+.blaster-blue {
+    color: #21314d;
+}
+
+.colorado-red {
+    color: #cc4628;
 }

@@ -16,4 +16,4 @@ Run $go run oresec-site
 - Need to add some other information pages as well as add to the calendar
 - Maybe change around some of the styling/add splash images from competitions/meetings
 
-
+https://xeiaso.net/blog/using-tailwind-go/
