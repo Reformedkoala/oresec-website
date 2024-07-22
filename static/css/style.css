@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #263f6a;
+    --secondary-color: #f15f25;
+    --text-color: #7a7c7e;
+    --subheading-color: #3C424F;
+    --mutedtext-color: #afafaf;
+}
+
+/* protip: I HATE FOOTERS */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#main{
+
+
+}
+
+img{
+    width: 50%;
+    height: 50%;
+
+}
+
+.footer{
+    position: relative;
+    top: 5px;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    opacity: 50%;
+    color: white;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    padding-top: 8rem;
+}
+
+.nav-link {
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid var(--primary-color);
+
+}
+
+.active {
+    border-bottom: 3px solid var(--primary-color);
+
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-grad {
+    background: linear-gradient(rgb(9, 57, 108), rgba(17,24,39));
+
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap
+}
+
+.blaster-blue {
+    color: #21314d;
+}
+
+.colorado-red {
+    color: #cc4628;
+}
